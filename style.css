@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#content {
+    width: 80vw;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#content div a{
+    margin: 0px 40px 0px 0px;
+    color: black;
+    text-decoration: none;
+}
