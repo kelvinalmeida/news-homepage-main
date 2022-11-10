@@ -23,13 +23,13 @@ header {
     margin: 60px 0px 50px 0px;
 }
 
-#content header div a{
+#content header div a {
     margin: 0vw 2vw 0vw 0vw;
     color: black;
     text-decoration: none;
 }
 
-#content header div a:nth-child(5){
+#content header div a:nth-child(5) {
     margin: 0vw 0vw 0vw 0vw;
 }
 
@@ -38,19 +38,20 @@ main {
     /* grid-template-columns: 298px 298px 298px; */
     grid-template-columns: 320px 320px 320px;
     grid-template-rows: 240px 200px 110px;
-    grid-template-areas: 
+    grid-template-areas:
         'img img news'
         'title info news'
         'info_1 info_2 info_3';
     gap: 20px;
 }
 
-main > img {
+#imgDesktop {
     width: 660px;
+    grid-area: img;
 }
 
-#img {
-    grid-area: img;
+#imgMobile {
+    display: none;
 }
 
 #title {
@@ -104,7 +105,7 @@ main > img {
 }
 
 #info_3 {
-    grid-area: info_3;    
+    grid-area: info_3;
 }
 
 #news {
@@ -138,16 +139,22 @@ main > img {
     border-left: 1px solid rgb(0, 0, 0);
 }
 
-#info_1, #info_2, #info_3 {
+#info_1,
+#info_2,
+#info_3 {
     display: flex;
 }
 
-#info_1 h2, #info_2 h2, #info_3 h2 {
+#info_1 h2,
+#info_2 h2,
+#info_3 h2 {
     font-size: 14px;
     margin: 7px 0px 0px 0px;
 }
 
-#info_1 p, #info_2 p, #info_3 p {
+#info_1 p,
+#info_2 p,
+#info_3 p {
     font-size: 13px;
     margin: 10px 0px 0px 0px;
     line-height: 20px;
@@ -155,13 +162,69 @@ main > img {
     color: #686868;
 }
 
-#info_1 img, #info_2 img, #info_3 img { 
+#info_1 img,
+#info_2 img,
+#info_3 img {
     height: 110px;
     margin-right: 17px;
 }
 
-#info_1 span, #info_2 span, #info_3 span { 
+#info_1 span,
+#info_2 span,
+#info_3 span {
     font-weight: bold;
     font-size: 25px;
     color: #c0c0c0;
+}
+
+@media (max-width: 1050px) {
+    main {
+        grid-template-columns: 300px;
+        grid-template-rows: 240px 130px 140px 420px 110px 110px;
+        grid-template-areas:
+            'img'
+            'title'
+            'info'
+            'news'
+            'info_1'
+            'info_2'
+            'info_3';
+
+        gap: 15px;
+    }
+
+    #imgDesktop {
+        width: 660px;
+        grid-area: img;
+        display: none;
+    }
+
+    #imgMobile {
+        display: inline;
+        width: 300px;
+    }
+
+    #title {
+        width: 300px;
+        font-size: 35px;
+        line-height: 35px;
+        align-items: flex-end;
+    }
+
+    #info p {
+        font-size: 14px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #info p {
+        margin: 0px 0px 20px 0px;
+    }
+
+    #info a {
+        height: 40px;
+        margin: 5px 0px 0px 0px;
+    }
+
+    #news
 }
