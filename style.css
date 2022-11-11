@@ -180,7 +180,7 @@ main {
 @media (max-width: 1050px) {
     main {
         grid-template-columns: 300px;
-        grid-template-rows: 240px 130px 140px 420px 110px 110px;
+        grid-template-rows: 240px 130px 140px 470px 110px 110px;
         grid-template-areas:
             'img'
             'title'
@@ -226,5 +226,20 @@ main {
         margin: 5px 0px 0px 0px;
     }
 
-    #news
+    #news {
+        margin: 25px 0px;
+        height: fit-content;
+    }
+
+    /* #info_1 {
+        margin: 60px 0px;
+    }
+
+    #info_2 {
+        margin: 80px 0px;
+    }
+
+    #info_1 {
+        margin: 100px 0px;
+    } */
 }
