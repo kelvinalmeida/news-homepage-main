@@ -7,6 +7,7 @@ body {
     width: 100vw;
     overflow-x: hidden;
     font-family: 'Inter', sans-serif;
+    /* position: relative; */
 }
 
 #content {
@@ -23,13 +24,35 @@ header {
     margin: 60px 0px 50px 0px;
 }
 
-#content header div a {
-    margin: 0vw 2vw 0vw 0vw;
-    color: black;
-    text-decoration: none;
+#content header ul {
+    display: flex;
+    /* position: fixed; */
 }
 
-#content header div a:nth-child(5) {
+#menuMobile {
+    display: none;
+}
+
+#menuMobileClose {
+    display: none;
+}
+
+input {
+    display: none;
+}
+
+
+#content header ul li {
+    margin: 0vw 2vw 0vw 0vw;
+    list-style: none;
+}
+
+#content header ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#content header ul li:nth-child(5) {
     margin: 0vw 0vw 0vw 0vw;
 }
 
@@ -178,6 +201,12 @@ main {
 }
 
 @media (max-width: 1050px) {
+
+    body {
+        position: relative;
+        /* overflow-y: hidden; */
+    }
+
     main {
         grid-template-columns: 300px;
         grid-template-rows: 240px 130px 140px 470px 110px 110px;
@@ -192,6 +221,7 @@ main {
 
         gap: 15px;
     }
+
 
     #imgDesktop {
         width: 660px;
@@ -231,15 +261,66 @@ main {
         height: fit-content;
     }
 
-    /* #info_1 {
-        margin: 60px 0px;
+    #content header ul {
+        display: none;
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        flex-direction: column;
+        height: 100vh;
+        top: -17px;
+        right: 0px;
+        z-index: 1;
+        padding: 0px;
+        width: 50vw;
     }
 
-    #info_2 {
-        margin: 80px 0px;
+    #menuMobile {
+        display: inline;
     }
 
-    #info_1 {
-        margin: 100px 0px;
-    } */
+    #content header label {
+        cursor: pointer;
+    }
+
+    #content header input:checked~label #menuMobileClose {
+        display: inline;
+    }
+
+    #content header input:checked~label #menuMobile {
+        display: none;
+    }
+
+    #content header input:checked~ul {
+        display: inline;
+    }
+
+    #content header input:checked~#backgroundMenuOpen {
+        position: fixed;
+        background-color: #1b1a1aa8;
+        width: 100vw;
+        height: 100vh;
+        top: 0px;
+        right: 0px;
+    }
+
+    #content header input:checked~label {
+        right: 0px;
+        cursor: pointer;
+        position: fixed;
+        top: 35px;
+        right: 25px;
+        z-index: 2;
+    }
+
+    #content header ul li {
+        margin: 20px 40px 0px 25px;
+    }
+
+    #content header ul li:nth-child(1) {
+        margin: 120px 40px 0px 25px;
+    }
+
+    #content header ul li:nth-child(5) {
+        margin: 20px 40px 0px 25px;
+    }
 }
