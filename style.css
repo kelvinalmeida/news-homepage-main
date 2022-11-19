@@ -60,12 +60,13 @@ main {
     display: grid;
     /* grid-template-columns: 298px 298px 298px; */
     grid-template-columns: 320px 320px 320px;
-    grid-template-rows: 240px 200px 110px;
+    grid-template-rows: 240px 200px 140px;
     grid-template-areas:
         'img img news'
         'title info news'
         'info_1 info_2 info_3';
     gap: 20px;
+    /* row-gap: 20px 50px; */
 }
 
 #imgDesktop {
@@ -166,6 +167,7 @@ main {
 #info_2,
 #info_3 {
     display: flex;
+    align-items: flex-end;
 }
 
 #info_1 h2,
