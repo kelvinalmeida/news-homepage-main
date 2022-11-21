@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://news-homepage-main-zeta.vercel.app/)
+- Solution URL: [Site](https://news-homepage-main-zeta.vercel.app/)
 
 ## My process
 
